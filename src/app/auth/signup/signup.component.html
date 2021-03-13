@@ -1,0 +1,29 @@
+<div>
+    <mat-card>
+        <mat-card-title>Register</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="myForm" (ngSubmit)="formSubmit()">
+                <mat-form-field>
+                  <mat-label>User Name</mat-label>
+                  <input  type="text"  formControlName="name" matInput />
+                  <mat-error *ngIf="myForm.controls.name.errors?.notAvailable">User is already taken</mat-error>
+                  <mat-hint *ngIf="myForm.controls.name.touched && (myForm.controls.name.value !=='') && !myForm.controls.name.errors?.notAvailable">User available</mat-hint>
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label>Password</mat-label>
+                  <input  type="password"  formControlName="password" matInput />
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Re-Password</mat-label>
+                    <input  type="password"  formControlName="repassword" matInput />
+                  </mat-form-field>
+              
+                <button type="submit" [disabled]="myForm.status !== 'VALID'" mat-raised-button  color="primary">Sign up</button>
+                <button type="button" mat-raised-button  color="accent">Reset</button>
+              </form>
+        
+        </mat-card-content>
+    </mat-card>
+
+</div>

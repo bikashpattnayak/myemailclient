@@ -1,0 +1,8 @@
+    <div class="dialog" (click)="$event.stopPropagation()" *ngIf="display">
+        <div class="header">
+            <div class="title"><ng-content select=".title"></ng-content></div>
+            <button (click)="showModel()" >&times;</button>
+        </div>
+        <div class="content"><ng-content select=".content"></ng-content></div>
+        <div class="action"><ng-content select=".action"></ng-content></div>
+    </div>

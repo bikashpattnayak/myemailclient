@@ -1,0 +1,54 @@
+.shadow {
+    /* position: absolute;
+     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    /* background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;  */
+}
+
+.dialog {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    width: 30rem;
+    height: 24rem;
+    border-radius: 10px;
+    z-index: 1000;
+    color: black;
+    /* border: 2px solid black; */
+    box-shadow: -5px -5px 5px #888888;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+button {
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border: 0;
+    outline: 0;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: large;
+    color: white;
+}
+.title {
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+.header {
+    background-color: rgb(26, 26, 148);
+    border-top-left-radius: 5px;
+}

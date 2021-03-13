@@ -1,0 +1,15 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.active {
+    background-color: royalblue;
+}
+
+mat-icon {
+    margin-top: 0.3rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+      <p><strong>From:</strong> {{ emailDetails?.from }}</p>
+      <mat-divider></mat-divider>
+      <p><strong>Subject:</strong> {{ emailDetails?.subject }}</p>
+      <p><strong>To:</strong> {{ emailDetails?.to }}</p>
+
+      <p [innerHTML]="emailDetails?.text"></p>
+    </div>
+    <div class="col-sm-3">
+      <button mat-raised-button color="warning" (click)="showModal()">Reply</button>
+    </div>
+  </div>
+</div>
+<app-modal>
+  <div class="title">{{ emailDetails?.subject }}</div>
+  <div class="content">To:{{ emailDetails?.from }} <textarea rows="10" cols="80"></textarea>
+    <button mat-raised-button>Send</button>
+    <p [innerHTML]="emailDetails?.text"></p>
+   
+  </div>
+  <div class="action"><button >Close</button></div>
+</app-modal>
+

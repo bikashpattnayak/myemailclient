@@ -1,0 +1,8 @@
+<mat-toolbar color="primary"> <a routerLink="/">Email Client</a>
+    <div class="right">
+        <button  *ngIf="isSignedIn" routerLink="/inbox" routerLinkActive="active" mat-button color="warning"> Inbox </button>
+        <button *ngIf="isSignedIn" routerLink="/signout" routerLinkActive="active" mat-button color="warning"> Sign Out </button>
+        <button  *ngIf="!isSignedIn" routerLink="/signup" [ngClass]="{active: baseRoute}" routerLinkActive="active" mat-button color="warning"> Sign Up </button>
+        <button *ngIf="!isSignedIn" routerLink="/signin" routerLinkActive="active" mat-button color="warning"> Sign In </button>
+    </div>
+</mat-toolbar>

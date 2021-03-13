@@ -1,0 +1,8 @@
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+.card:hover {
+    background-color:rgb(189, 187, 187);
+}

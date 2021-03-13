@@ -1,0 +1,9 @@
+<div *ngFor="let email of emails | async">
+    <a [routerLink]="email.id" routerLinkActive="active">
+      <div class="card">
+        <div class="card-body"><h3>{{email.subject}}</h3>
+          <div>{{email.from}}</div>
+        </div>
+      </div>
+    </a>
+<div></div>
